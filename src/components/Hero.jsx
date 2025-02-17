@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import { FaLinkedin, FaGithub, FaResearchgate, FaEnvelope } from "react-icons/fa";
+import WebGLSetup from "./WebGLSetup";
 
 const typingText = "Metun";
 const stopAt = 1;
@@ -91,6 +92,7 @@ const Hero = () => {
         </div>
       </div>
 
+      <WebGLSetup />
       <ComputersCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
