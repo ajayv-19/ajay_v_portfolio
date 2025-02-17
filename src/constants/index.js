@@ -7,7 +7,7 @@ import {
   typescript,
   html,
   css,
-  reactjs,
+  reactJS,
   redux,
   tailwind,
   nodejs,
@@ -103,7 +103,7 @@ const technologies = [
   },
   {
     name: "React JS",
-    icon: reactjs,
+    icon: reactJS,
   },
   {
     name: "React Native",
