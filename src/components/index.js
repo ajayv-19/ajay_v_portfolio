@@ -9,6 +9,7 @@ import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Publications from './Publications';
 import Featured from './Featured';
+import StarsCanvasLowIntensity from './StarsCanvasLowIntensity';
 
 export {
   Hero,
@@ -24,5 +25,6 @@ export {
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas,
+  StarsCanvasLowIntensity,
   Featured
 }
