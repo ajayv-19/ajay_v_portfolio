@@ -69,13 +69,18 @@ const Publications = () => {
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           Here are my research contributions across AI, deep learning, and IoT.
-          These publications reflect my efforts in advancing technology and solving real-world challenges.
+          These publications reflect my efforts in advancing technology and
+          solving real-world challenges.
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap gap-7 block">
         {publications.map((publication, index) => (
-          <PublicationCard key={`publication-${index}`} index={index} {...publication} />
+          <PublicationCard
+            key={`publication-${index}`}
+            index={index}
+            {...publication}
+          />
         ))}
       </div>
     </>

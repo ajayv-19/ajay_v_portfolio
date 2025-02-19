@@ -53,12 +53,12 @@ const EarthCanvas = () => {
       initial={{ x: "100%", opacity: 0 }} // Enter from right
       animate={{ x: 0, opacity: 1 }} // Move into position
       transition={{ duration: 1.5, ease: "easeOut" }} // Smooth transition
-      className="w-full flex justify-center items-center md:w-[500px] lg:w-[600px]"
+      className="flex justify-center items-center w-full max-w-[900px]"
     >
       <motion.img
         src={globeImage}
         alt="Globe"
-        className="w-[350px] md:w-[400px] lg:w-[600px] h-auto"
+        className="w-[400px] md:w-[500px] lg:w-[850px] max-w-full h-auto"
         animate={{
           y: [0, -10, 0], // Floating effect
         }}
@@ -73,4 +73,3 @@ const EarthCanvas = () => {
 };
 
 export default EarthCanvas;
-

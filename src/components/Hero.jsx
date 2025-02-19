@@ -83,7 +83,7 @@ const Hero = () => {
             Hi, I am<span className="text-[#915EFF]"> {displayedText}</span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100`}>
-            Lead Software Developer | ML Research Scientist
+             Software Developer | ML Research Scientist
           </p>
           {/* Social Media Links Below EarthCanvas */}
           <div className="mt-2 flex flex-row space-x-3">
@@ -118,7 +118,7 @@ const Hero = () => {
               <FaEnvelope size={30} />
             </a>
           </div>
-          <div className="absolute w-full flex flex-col items-center lg:items-start lg:top-1/2">
+          <div className="absolute flex flex-col items-center lg:items-start lg:top-1/2">
             {/* For Large Screens: Show Counters */}
             <div className="hidden lg:flex flex-row gap-10">
               {/* Years of Experience Counter */}

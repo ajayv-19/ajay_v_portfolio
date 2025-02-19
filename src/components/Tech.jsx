@@ -9,7 +9,7 @@ import { SectionWrapper } from "../hoc";
 const TechCard = ({ index, name, icon }) => (
   <Tilt className="max-w-[120px] w-full">
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.3, 0.75)} // Matching ServiceCard speed
+      variants={fadeIn("right", "spring", index * 0.1, 0.5)} 
       className="w-full green-pink-gradient p-[1px] rounded-full shadow-lg"
     >
       <div
