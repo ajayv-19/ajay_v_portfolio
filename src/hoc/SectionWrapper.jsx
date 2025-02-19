@@ -9,10 +9,14 @@ const SectionWrapper = (Component, idName) =>
 
     return (
       <motion.section
-        variants={isLargeScreen ? staggerContainer() : {}}
-        initial={isLargeScreen ? "hidden" : "visible"}
-        whileInView={isLargeScreen ? "show" : "visible"}
-        viewport={{ once: true, amount: 0.25 }}
+        {...(isLargeScreen
+          ? {
+              variants: staggerContainer(),
+              initial: "hidden",
+              whileInView: "show",
+            }
+          : {})}
+        viewport={isLargeScreen ? { once: true, amount: 0.25 } : {}}
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
       >
         <span className="hash-span" id={idName}>
