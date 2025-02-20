@@ -13,7 +13,7 @@ const FeaturedCard = ({ index, title, image, links }) => {
       target="_blank"
       rel="noopener noreferrer"
       variants={fadeIn("", "spring", index * 0.5, 0.75)}
-      className="w-full md:w-[48%] bg-primary p-8 rounded-3xl cursor-pointer hover:scale-[1.02] transition-transform"
+      className="w-full md:w-[45%] max-w-[90%] mx-auto bg-primary p-8 rounded-3xl cursor-pointer hover:scale-[1.02] transition-transform"
     >
       <div className="relative w-full h-[260px]">
         {/* Clickable Image */}
