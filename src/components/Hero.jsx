@@ -83,7 +83,7 @@ const Hero = () => {
             Hi, I am<span className="text-[#915EFF]"> {displayedText}</span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100`}>
-             Software Developer | ML Research Scientist
+             Software Engineer | ML Research Scientist
           </p>
           {/* Social Media Links Below EarthCanvas */}
           <div className="mt-2 flex flex-row space-x-3">

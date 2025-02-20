@@ -6,40 +6,40 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import profile from "../assets/profile.jpeg";
+import useMediaQuery from "../utils/useMediaQuery";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
+const ServiceCard = ({ index, title, icon }) => {
+  const isLargeScreen = useMediaQuery("(min-width: 1024px)");
+
+  return (
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      className="w-full xs:w-[250px] flex justify-center"
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
-
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
-      </div>
+      {isLargeScreen ? (
+        <Tilt options={{ max: 45, scale: 1, speed: 450 }}>
+          <CardContent title={title} icon={icon} />
+        </Tilt>
+      ) : (
+        <CardContent title={title} icon={icon} />
+      )}
     </motion.div>
-  </Tilt>
+  );
+};
+
+const CardContent = ({ title, icon }) => (
+  <div className="w-full xs:w-[250px] h-[320px] green-pink-gradient p-[1px] rounded-[20px] shadow-card flex flex-col justify-center items-center">
+    <div className="bg-tertiary rounded-[20px] py-5 px-12 h-full w-full flex flex-col justify-center items-center">
+      <img src={icon} alt="service_icon" className="w-16 h-16 object-contain" />
+      <h3 className="text-white text-[20px] font-bold text-center mt-4">{title}</h3>
+    </div>
+  </div>
 );
 
 const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        {/* <p className={styles.sectionSubText}>Introduction</p> */}
         <h2 className={styles.sectionHeadText}>About Me</h2>
         <motion.div
           variants={fadeIn("", "", 0.1, 1)}
@@ -72,15 +72,11 @@ const About = () => {
 
           {/* Profile Image Section */}
           <div className="md:w-2/5 flex justify-center md:justify-end">
-            <img
-              src={profile}
-              alt="profile"
-              className="w-96 h-96 object-cover mt-5"
-            />
+            <img src={profile} alt="profile" className="w-96 h-96 object-cover mt-5" />
           </div>
         </motion.div>
 
-        <div className="mt-10 flex flex-wrap gap-10">
+        <div className="mt-10 flex flex-wrap gap-10 justify-center">
           {services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />
           ))}
