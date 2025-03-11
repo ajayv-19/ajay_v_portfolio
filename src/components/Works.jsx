@@ -17,6 +17,7 @@ const ProjectCard = ({
   image,
   source_code_link,
   isFigma,
+  publication_link,
 }) => {
   const isLargeScreen = useMediaQuery("(min-width: 1024px)");
 
@@ -31,6 +32,7 @@ const ProjectCard = ({
             image={image}
             source_code_link={source_code_link}
             isFigma={isFigma}
+            publication_link={publication_link}
           />
         </Tilt>
       ) : (
@@ -54,29 +56,61 @@ const ProjectContent = ({
   image,
   source_code_link,
   isFigma,
+  publication_link,
 }) => (
-  <a href={source_code_link} target="_blank" rel="noopener noreferrer">
-    <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer">
-      <div className="relative w-full h-[230px]">
-        {/* Entire card is now clickable */}
-        <img
-          src={image}
-          alt="project_image"
-          className="w-full h-full object-cover rounded-2xl"
-        />
-        {isFigma && (
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div className="black-gradient w-10 h-10 rounded-full flex justify-center items-center">
-              <img
-                src={isFigma ? figmaIcon : github}
-                alt={isFigma ? "figma link" : "source code"}
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div>
+  <a href={publication_link || source_code_link} target="_blank" rel="noopener noreferrer">
+  <div className="flex flex-col md:flex-row bg-tertiary p-5 rounded-2xl w-full cursor-pointer md:space-x-5">
+    {/* Image Section */}
+    <div className="relative md:w-[400px] w-full h-[230px] flex-shrink-0">
+      <img
+        src={image}
+        alt="project_image"
+        className="w-full h-full object-cover rounded-2xl"
+      />
+      <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+        {source_code_link && !isFigma && (
+          <a
+            href={source_code_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
+          >
+            <img
+              src={github}
+              alt="GitHub source code"
+              className="w-1/2 h-1/2 object-contain"
+            />
+          </a>
+        )}
+        {isFigma && source_code_link && (
+          <a
+            href={source_code_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
+          >
+            <img
+              src={figmaIcon}
+              alt="Figma link"
+              className="w-1/2 h-1/2 object-contain"
+            />
+          </a>
+        )}
+        {publication_link && !isFigma && !source_code_link && (
+          <a
+            href={publication_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
+          >
+            <span className="text-white text-xs font-bold mr-1">🔗</span>
+          </a>
         )}
       </div>
+    </div>
 
+    {/* Text Content Section */}
+    <div className="flex flex-col">
       <div className="mt-5">
         <h3 className="text-white font-bold text-[24px]">{name}</h3>
         <p className="mt-2 text-secondary text-[14px]">{description}</p>
@@ -90,7 +124,8 @@ const ProjectContent = ({
         ))}
       </div>
     </div>
-  </a>
+  </div>
+</a>
 );
 
 const Works = () => {

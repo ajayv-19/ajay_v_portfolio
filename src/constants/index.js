@@ -35,7 +35,10 @@ import {
   ecological,
   neuralnetwork,
   sternblog,
-  sternfellow
+  sternfellow,
+  youtubeSummarization,
+  rainPrediction,
+  gadgetEase,
 } from "../assets";
 
 export const navLinks = [
@@ -238,6 +241,52 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Gadget Ease",
+    description:
+      "Gadget Ease is a cutting-edge ecommerce platform tailored for mobile phone enthusiasts, offering a seamless purchasing experience with customizable options.",
+    tags: [
+      { name: "mvc-architecture", color: "blue-text-gradient" },
+      { name: "express.js", color: "green-text-gradient" },
+      { name: "node.js", color: "pink-text-gradient" },
+      { name: "mongodb", color: "orange-text-gradient" },
+      { name: "socket.io", color: "blue-text-gradient" },
+      { name: "twilio-api", color: "green-text-gradient" },
+      { name: "paypal-integration", color: "pink-text-gradient" },
+    ],
+    image: gadgetEase,
+    source_code_link: "https://github.com/MetunNivin/Gadgets_Ease-ecom",
+    isFigma: false,
+  },
+  {
+    name: "Rain in Australia - Next-Day Prediction Model",
+    description:
+      "Developed a machine learning model to predict next-day rainfall in Australia using PySpark, Apache Spark MLlib, and XGBoost. Processed 10+ years of meteorological data (~10M records), applying feature engineering on key weather attributes like temperature, humidity, and wind speed. Optimized performance with hyperparameter tuning and MLflow for tracking, enhancing accuracy and efficiency.",
+    tags: [
+      { name: "pyspark", color: "blue-text-gradient" },
+      { name: "xgboost", color: "green-text-gradient" },
+      { name: "big-data", color: "pink-text-gradient" },
+      { name: "mlflow", color: "orange-text-gradient" },
+    ],
+    image: rainPrediction,
+    source_code_link: "https://github.com/MetunNivin/Weather_Prediction",
+    isFigma: false,
+  },
+  {
+    name: "Retrieval-Augmented LLM Summarization & Transcription Engine for YouTube",
+    description:
+      "Developed an advanced AI-powered transcription and summarization engine for YouTube videos using Llama 2, Whisper ASR, and Haystack. Optimized inference pipelines to enhance performance and reduce GPU dependency.",
+    tags: [
+      { name: "llama2", color: "blue-text-gradient" },
+      { name: "haystack", color: "green-text-gradient" },
+      { name: "whisper-asr", color: "pink-text-gradient" },
+      { name: "fastapi", color: "orange-text-gradient" },
+    ],
+    image: youtubeSummarization,
+    source_code_link:
+      "https://github.com/MetunNivin/Retrieval-Augmented-LLM-Summarization-Transcription-Engine-for-YouTube",
+    isFigma: false,
+  },
+  {
     name: "Quick Consult: Doctor Appointment App",
     description:
       "Developed a React Native doctor appointment app with Expo, providing seamless booking and consultation experiences for both iOS and Android users. Integrated Firebase authentication for secure sign-ins, Strapi for backend management, and Google Cloud Vision API for OCR-based prescription analysis.",
@@ -260,6 +309,7 @@ const projects = [
       { name: "computer-vision", color: "pink-text-gradient" },
     ],
     image: airobot,
+    publication_link: "https://ieeexplore.ieee.org/document/10592899",
     // source_code_link: "https://github.com/MetunNivin",
     isFigma: false,
   },
@@ -273,6 +323,7 @@ const projects = [
       { name: "edge-computing", color: "pink-text-gradient" },
     ],
     image: carrent,
+    publication_link: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:2e5259b9-680e-4fde-8e51-9a60455540ff",
     // source_code_link: "https://github.com/MetunNivin",
     isFigma: false,
   },

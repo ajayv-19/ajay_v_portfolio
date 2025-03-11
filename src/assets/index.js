@@ -42,7 +42,9 @@ import ckd from "./publications/ckd.png";
 import hybridintrusion from "./publications/hybridintrusion.png";
 import neuralnetwork from "./publications/neuralnetwork.png";
 import ecological from "./publications/ecological.png";
-
+import youtubeSummarization from "./ragg_utube.webp";
+import rainPrediction from "./rainPrediction.webp";
+import gadgetEase from "./gadgetEase.png";
 import sternblog from "./featured/sternblog.png";
 import sternfellow from "./featured/sternfellow.png";
 
@@ -88,5 +90,8 @@ export {
   neuralnetwork,  
   ecological,
   sternblog,
-  sternfellow
+  sternfellow,
+  youtubeSummarization,
+  rainPrediction,
+  gadgetEase,
 };
