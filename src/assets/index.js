@@ -45,6 +45,7 @@ import ecological from "./publications/ecological.png";
 import youtubeSummarization from "./ragg_utube.webp";
 import rainPrediction from "./rainPrediction.webp";
 import gadgetEase from "./gadgetEase.png";
+import workoutBuddyImage from "./workoutBuddyImage.png";
 import sternblog from "./featured/sternblog.png";
 import sternfellow from "./featured/sternfellow.png";
 
@@ -94,4 +95,5 @@ export {
   youtubeSummarization,
   rainPrediction,
   gadgetEase,
+  workoutBuddyImage,
 };

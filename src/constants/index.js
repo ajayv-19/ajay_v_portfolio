@@ -39,6 +39,7 @@ import {
   youtubeSummarization,
   rainPrediction,
   gadgetEase,
+  workoutBuddyImage,
 } from "../assets";
 
 export const navLinks = [
@@ -284,6 +285,19 @@ const projects = [
     image: youtubeSummarization,
     source_code_link:
       "https://github.com/MetunNivin/Retrieval-Augmented-LLM-Summarization-Transcription-Engine-for-YouTube",
+    isFigma: false,
+  },
+  {
+    name: "Workout Buddy",
+    description:
+      "Workout Buddy is a fitness platform designed to help users discover exercises for every body part. Built using React and Rapid API, it offers a user-friendly interface to explore, filter, and sort exercises based on body parts, equipment, and difficulty levels.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "material-ui", color: "green-text-gradient" },
+      { name: "rapid-api", color: "pink-text-gradient" },
+    ],
+    image: workoutBuddyImage, 
+    source_code_link: "https://github.com/MetunNivin/Workout_buddy",
     isFigma: false,
   },
   {
