@@ -75,7 +75,7 @@ const services = [
     icon: web,
   },
   {
-    title: "Devops Engineer",
+    title: "Mobile Application Developer",
     icon: mobile,
   },
   {
