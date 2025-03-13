@@ -160,7 +160,7 @@ const Hero = () => {
         {/* For Small Screens: Show Download CV Button */}
         <div className="lg:hidden flex justify-center w-full">
           <a
-            href="https://drive.google.com/uc?export=download&id=1TvHjLA-FYZsWS9Rm6pehOm_naVSFsqBl"
+            href="https://drive.google.com/uc?export=download&id=1Pz8bhJnv-ntclRj-oGa4ACohg55h985x"
             download
             className="bg-purple-600 hover:bg-purple-700 hover:scale-110 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 text-md"
           >
