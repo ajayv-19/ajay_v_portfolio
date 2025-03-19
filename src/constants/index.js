@@ -310,7 +310,7 @@ const projects = [
       { name: "google-cloud-vision", color: "pink-text-gradient" },
     ],
     image: docconsult,
-    // source_code_link: "https://github.com/MetunNivin",
+    source_code_link: "https://github.com/MetunNivin/MediConsult",
     isFigma: false,
   },
   {
