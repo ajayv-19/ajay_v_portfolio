@@ -159,7 +159,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Feb 2024 - Present",
     points: [
-      "Led the development of FireBeats, an AI-driven remote health monitoring app for firefighters, analyzing real-time physiological data to assess cardiovascular risks.",
+      "Orchestrated FireBeats, an AI-driven remote health monitoring app for firefighters, analyzing real-time physiological data to assess cardiovascular risks.",
       "Built a companion mobile app using React Native, Firebase, and AWS, enabling real-time health monitoring, push notifications, and seamless user authentication.",
       "Secured $110,000 in non-equity funding, advancing to the NYU-Berkley Entrepreneurship Challenge semifinals and NYU Stern accelerator program.",
       "Integrated data from Fitbit, Garmin, Google-Fit, and Apple-HealthKit, streamlining data through GCP Functions to trigger AI models on VertexAI, achieving over 95% accuracy in detecting atrial fibrillation, hypertension, and sleep apnea.",
@@ -194,9 +194,8 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jun 2022 – Aug 2023",
     points: [
-      "Led front-end development for the TCP project using Angular, TypeScript, HTML5, and CSS3, enhancing user interface and functionality.",
-      "Integrated Java and SQL backend, improving performance by 30% and achieving 99.9% uptime stability.",
-      "Executed API testing in card management/payments using Postman, ensuring 98% transaction processing reliability.",
+      "Built a secure banking admin portal with role-based access to manage policyholders and policies, using Angular, TypeScript, HTML, and CSS; integrated with Java backend and Jenkins CI/CD, reducing manual deployment time by 40% and ensuring stable production releases.",
+      "Integrated Comviva’s mobiquity Card Management and Payments APIs to enable secure card issuance, user authentication, and transaction processing within the portal."
     ],
   },
   {
@@ -206,9 +205,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "Mar 2022 – Jun 2022",
     points: [
-      "Developed a secure online banking platform using Java Swings, SQL, and Apache Server, incorporating encrypted authentication and unique ID generation.",
-      "Implemented encrypted PIN verification, increasing user engagement by 40% through secure money transfers and bill payments.",
-      "Developed a real-time mini-statement feature, enabling users to instantly access their transaction history.",
+      "Developed a secure online banking platform using Java Swings, SQL, and Apache Server, incorporating encrypted authentication and unique ID generation for enhanced security.",
+      "Implemented encryption of PIN verification, boosting user engagement by 40% through reliable money transfers and bill payments, and implemented a real-time mini-statement feature allowing users instant access to their transaction history.",
     ],
   },
 ];
