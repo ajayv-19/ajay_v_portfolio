@@ -124,7 +124,7 @@ const Hero = () => {
               {/* Years of Experience Counter */}
               <motion.div className="text-center text-white font-bold text-xl md:text-3xl flex flex-col items-center">
                 <p className="flex items-center text-white text-2xl md:text-4xl font-extrabold">
-                  <Counter from={0} to={3} duration={2} />+
+                  <Counter from={0} to={3} duration={2} />
                 </p>
                 <p className="text-gray-400 text-xs md:text-base">
                   Years of Experience
@@ -134,10 +134,10 @@ const Hero = () => {
               {/* Grant Counter */}
               <motion.div className="text-center text-white font-bold text-xl md:text-3xl flex flex-col items-center">
                 <p className="flex items-center text-white text-2xl md:text-4xl font-extrabold">
-                  $ <Counter from={0} to={110000} duration={2} />
+                  $ <Counter from={0} to={24000} duration={2} />
                 </p>
                 <p className="text-gray-400 text-xs md:text-base">
-                  Grant for AI App
+                    Total Scholarships Secured 
                 </p>
               </motion.div>
 
@@ -160,7 +160,7 @@ const Hero = () => {
         {/* For Small Screens: Show Download CV Button */}
         <div className="lg:hidden flex justify-center w-full">
           <a
-            href="https://drive.google.com/uc?export=download&id=1Pz8bhJnv-ntclRj-oGa4ACohg55h985x"
+            // href="https://drive.google.com/uc?export=download&id=1Pz8bhJnv-ntclRj-oGa4ACohg55h985x"
             download
             className="bg-purple-600 hover:bg-purple-700 hover:scale-110 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 text-md"
           >
