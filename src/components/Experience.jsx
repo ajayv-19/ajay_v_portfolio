@@ -56,7 +56,7 @@ const ExperienceCard = ({ experience }) => {
       {/* Display links if they exist */}
       {experience.links && (
         <div className="mt-5">
-          <h4 className="text-white text-[18px] font-semibold">Featured On:</h4>
+          <h4 className="text-white text-[18px] font-semibold">Links:</h4>
           <ul className="list-disc ml-5 space-y-2">
             {experience.links.map((link, index) => (
               <li key={index}>

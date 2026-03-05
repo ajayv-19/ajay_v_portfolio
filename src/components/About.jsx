@@ -48,26 +48,21 @@ const About = () => {
           {/* Text Section */}
           <div className="md:w-3/5">
             <span className="block text-white text-[19px] font-bold mb-2">
-              Hey there! I’m Metun
+              Hey there! I’m Ajay
             </span>
-            Ever met someone who blends code, AI, and entrepreneurship like a
-            perfectly brewed cup of coffee? Well, now you have! I’m a software
-            engineer, AI enthusiast, and problem-solver who thrives at the
-            intersection of technology and impact. Currently pursuing my
-            Master’s in Computer Science at NYU, I’ve built AI-driven healthcare
-            solutions, engineered fintech platforms, and even secured $110K in
-            NSF funding for FireBeats, an AI-powered health monitoring app for
-            firefighters. Oh, and did I mention I’m a Stern Venture Fellow 2024?
-            Pretty wild, right? If it involves React, AI models, or AWS/GCP
-            magic, I’m all over it. And because I love nerding out over AI, I’ve
-            published 8 research papers in AI/ML with IEEE and Springer,
-            covering everything from deep learning in healthcare to IoT-based
-            smart automation. Basically, if it’s AI-powered, I’ve probably tried
-            to build it. When I’m not writing code, you’ll find me brainstorming
-            wild ideas, chasing new challenges, or debugging at 3 AM while
-            questioning my life choices. If you’re into building something
-            awesome, exploring AI, or just want to exchange tech memes—hit me
-            up!
+            I’m a Software Engineer based in Brooklyn, NY, pursuing my
+            Master’s in Computer Engineering at NYU (GPA 3.9/4). I build
+            scalable systems, cloud-native apps, and AI-powered products. At
+            Campus Mesh I ship Node.js microservices and LLM-based retrieval for
+            10K+ users; at Amazon I worked on serverless infra (AWS CDK, Lambda,
+            DynamoDB) and React frontends; and at NYU I help build an NSF-funded
+            health platform (MyBeats) with React, Node, PostgreSQL, and Stripe.
+            Before grad school I was a Senior Software Engineer at PwC, where I
+            led Azure backends, NLP/OCR pipelines, and Power BI reporting. I’m
+            comfortable across the stack—Python, Java, TypeScript, React, Node,
+            AWS, Azure—and I’ve published in IEEE on deep learning for stroke
+            detection and ML for diabetes prediction. If you’re into distributed
+            systems, cloud, or AI/ML, let’s connect!
           </div>
 
           {/* Profile Image Section */}

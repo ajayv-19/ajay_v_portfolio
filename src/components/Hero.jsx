@@ -3,12 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import StarsCanvasLowIntensity from "./StarsCanvasLowIntensity";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaResearchgate,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Counter = ({ from, to, duration = 2 }) => {
   const [count, setCount] = useState(from);
@@ -33,7 +28,7 @@ const Counter = ({ from, to, duration = 2 }) => {
   return <span>{count.toLocaleString()}</span>;
 };
 
-const typingText = "Metun";
+const typingText = "Ajay";
 const stopAt = 1;
 
 const Hero = () => {
@@ -51,7 +46,7 @@ const Hero = () => {
         setDisplayedText(typingText.substring(0, index));
         setIndex((prev) => prev + 1);
       } else if (isDeleting && index > stopAt) {
-        // Backspacing but stopping at "M"
+        // Backspacing but stopping at "A"
         setDisplayedText(typingText.substring(0, index - 1));
         setIndex((prev) => prev - 1);
       }
@@ -60,7 +55,7 @@ const Hero = () => {
         // Pause when fully typed
         setTimeout(() => setIsDeleting(true), pauseTime);
       } else if (index === stopAt + 1 && isDeleting) {
-        // Pause when stopping at "M" before retyping
+        // Pause when stopping at "A" before retyping
         setTimeout(() => setIsDeleting(false), pauseTime);
       }
     }, typingSpeed);
@@ -83,12 +78,12 @@ const Hero = () => {
             Hi, I am<span className="text-[#915EFF]"> {displayedText}</span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100`}>
-             Software Engineer | ML Research Scientist
+            Software Engineer | MS Computer Engineering @ NYU
           </p>
-          {/* Social Media Links Below EarthCanvas */}
+          {/* Social Media Links */}
           <div className="mt-2 flex flex-row space-x-3">
             <a
-              href="https://www.linkedin.com/in/metun/"
+              href="https://www.linkedin.com/in/ajay-venkatesh-32013b17b/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full text-white hover:text-purple-500 transition-all duration-300 flex items-center justify-center shadow-lg"
@@ -96,7 +91,7 @@ const Hero = () => {
               <FaLinkedin size={30} />
             </a>
             <a
-              href="https://github.com/MetunNivin"
+              href="https://github.com/ajayv-19"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full text-white hover:text-purple-500 transition-all duration-300 flex items-center justify-center shadow-lg"
@@ -104,15 +99,7 @@ const Hero = () => {
               <FaGithub size={30} />
             </a>
             <a
-              href="https://www.researchgate.net/profile/Metun-Nivin/research"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full text-white hover:text-purple-500 transition-all duration-300 flex items-center justify-center shadow-lg"
-            >
-              <FaResearchgate size={30} />
-            </a>
-            <a
-              href="mailto:metunnivin@gmail.com"
+              href="mailto:av3855@nyu.edu"
               className="w-12 h-12 rounded-full text-white hover:text-purple-500 transition-all duration-300 flex items-center justify-center shadow-lg"
             >
               <FaEnvelope size={30} />

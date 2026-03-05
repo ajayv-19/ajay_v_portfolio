@@ -71,19 +71,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Frontend Developer",
-    icon: web,
-  },
-  {
-    title: "Mobile Application Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
+    title: "Backend & Microservices",
     icon: backend,
   },
   {
-    title: "AI/ML Researcher",
+    title: "Full-Stack Developer",
+    icon: web,
+  },
+  {
+    title: "Cloud & DevOps",
+    icon: docker,
+  },
+  {
+    title: "AI/ML & Data",
     icon: creator,
   },
 ];
@@ -153,60 +153,59 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Lead AI & Software Developer",
-    company_name: "FireBeats, NYU",
+    title: "Software Engineer",
+    company_name: "Campus Mesh",
+    icon: backend,
+    iconBg: "#E6DEDD",
+    date: "Jan 2025 – Present",
+    points: [
+      "Developed and maintained scalable Node.js microservices powering real-time academic workflows for 10K+ users, including study groups, messaging, notifications, and profile management.",
+      "Built a personalized recommendation engine using collaborative filtering and behavioral analytics, increasing user engagement by 28% and retention by 50%.",
+      "Authored LLM-based retrieval pipelines for CampusIQ (AI Assistant), improving contextual accuracy by 30% through semantic retrieval and structured data indexing.",
+    ],
+  },
+  {
+    title: "Software Development Engineer Intern",
+    company_name: "Amazon",
+    icon: creator,
+    iconBg: "#383E56",
+    date: "May 2025 – Aug 2025",
+    points: [
+      "Architected a secure UI console for Amazon fulfillment center teams to view image/video evidence across FCs; presented the system design for approval and established Role Based Access (4+ roles) using OAuth, Midway SSO, and HELIS.",
+      "Provisioned serverless Infrastructure-as-Code using AWS CDK with API Gateway, Lambda, DynamoDB, S3, and IAM, reducing provisioning time by 70% and enabling multi-stage, multi-region CI/CD deployments.",
+      "Built a React 18 frontend with optimized API integration, advanced filtering, and client-side caching, reducing page load time by 40%.",
+      "Engineered backend services in Java using Coral, Smithy, Dagger, and CBOR serialization; applied low-level design and design patterns, reducing backend execution time by 35% with unit and integration testing using Mockito.",
+    ],
+  },
+  {
+    title: "Software Developer (On-Campus)",
+    company_name: "New York University (Novel AI Technologies, Inc.)",
     icon: nyu,
     iconBg: "#E6DEDD",
-    date: "Feb 2024 - Present",
+    date: "Aug 2024 – Present",
     points: [
-      "Orchestrated FireBeats, an AI-driven remote health monitoring app for firefighters, analyzing real-time physiological data to assess cardiovascular risks.",
-      "Built a companion mobile app using React Native, Firebase, and AWS, enabling real-time health monitoring, push notifications, and seamless user authentication.",
-      "Secured $110,000 in non-equity funding, advancing to the NYU-Berkley Entrepreneurship Challenge semifinals and NYU Stern accelerator program.",
-      "Integrated data from Fitbit, Garmin, Google-Fit, and Apple-HealthKit, streamlining data through GCP Functions to trigger AI models on VertexAI, achieving over 95% accuracy in detecting atrial fibrillation, hypertension, and sleep apnea.",
-    ],
-  },
-  {
-    title: "Software Developer Intern",
-    company_name: "Berkley Center for Entrepreneurship",
-    icon: firebeats,
-    iconBg: "#383E56",
-    date: "Jun 2024 – Aug 2024",
-    points: [
-      "Built MyBeats, a FireBeats-integrated doctor-patient platform, designing a scalable AWS backend for appointment booking and virtual consultations.",
-      "Integrated LSTM for predictive analytics, S3 for image uploads, Sentry for error tracking, and Stripe for secure transactions within a React Native app.",
-      "Optimized Redux state management and Google Maps integration, reducing API latency by 30% and improving cross-platform performance on iOS and Android.",
+      "Architected an NSF-funded ($100K) AI-powered health app for iOS and Android, processing real-time wearable data; deployed cloud-hosted AI models for health metrics analysis and food image processing.",
+      "Engineered ETL pipelines transforming NoSQL into PostgreSQL using concurrency control and locking mechanisms; processed 250K+ records and powered AWS QuickSight dashboards for real-time health analytics.",
+      "Developed an insurance analytics platform (React, Node.js, REST APIs); deployed Docker containers on EC2, implemented Stripe billing, RBAC, and row-level security, generating $50K+ revenue.",
+      "Streamlined underwriting via broker portal integrated with insurer platform; implemented document and media processing and WebSocket-based real-time communication; secured 6 insurance clients.",
     ],
     links: [
-      {
-        text: "Stern Venture Fellows Blog",
-        url: "https://www.sternventurefellows.com/2024-fellows",
-      },
-      {
-        text: "Metun Nivin on FireBeats",
-        url: "https://nyusternberkleycenter.com/2024/07/summer-coming-to-a-close-with-metun-nivin-of-firebeats/",
-      },
+      { text: "MyBeats Health", url: "https://mybeatshealth.com/home" },
+      { text: "Broker Portal", url: "https://broker.mybeatshealth.com/" },
     ],
   },
   {
-    title: "Front-end Software Development Engineer",
-    company_name: "Comviva",
+    title: "Senior Software Engineer",
+    company_name: "PricewaterhouseCoopers (PwC)",
     icon: comviva,
-    iconBg: "#E6DEDD",
-    date: "Jun 2022 – Aug 2023",
-    points: [
-      "Built a secure banking admin portal with role-based access to manage policyholders and policies, using Angular, TypeScript, HTML, and CSS; integrated with Java backend and Jenkins CI/CD, reducing manual deployment time by 40% and ensuring stable production releases.",
-      "Integrated Comviva’s mobiquity Card Management and Payments APIs to enable secure card issuance, user authentication, and transaction processing within the portal."
-    ],
-  },
-  {
-    title: "Software Developer Intern",
-    company_name: "Cognizant",
-    icon: cognizant,
     iconBg: "#383E56",
-    date: "Mar 2022 – Jun 2022",
+    date: "Aug 2021 – Aug 2024",
     points: [
-      "Developed a secure online banking platform using Java Swings, SQL, and Apache Server, incorporating encrypted authentication and unique ID generation for enhanced security.",
-      "Implemented encryption of PIN verification, boosting user engagement by 40% through reliable money transfers and bill payments, and implemented a real-time mini-statement feature allowing users instant access to their transaction history.",
+      "Developed a distributed backend on Microsoft Azure for a health platform, integrating with Microsoft CRM and implementing event-driven processing and fault tolerance.",
+      "Led code reviews and mentored engineers on software design principles, reducing production bugs by 25%.",
+      "Deployed an NLP-based OCR neural model on Azure to automate structured data extraction, reducing data processing time by 75%.",
+      "Optimized data ingestion with parallel processing for 100K-row Excel files; reduced execution time from 5 hours to 1 hour.",
+      "Built Power BI dashboards processing large datasets from multiple databases, improving reporting efficiency by 40%.",
     ],
   },
 ];
