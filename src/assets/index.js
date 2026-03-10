@@ -34,7 +34,7 @@ import nyu from "./company/nyu.png";
 import firebeats from "./company/firebeats.png";
 import comviva from "./company/comviva.png";
 import cognizant from "./company/cognizant.png";
-import campusmeshLogo from "./company/campusmesh.png";
+import campusmeshLogo from "./company/campusmesh.svg";
 import amazonLogo from "./company/amazon.png";
 import pwcLogo from "./company/pwc.png";
 
@@ -93,59 +93,6 @@ export {
   campusmeshLogo,
   amazonLogo,
   pwcLogo,
-  carrent,
-  docconsult,
-  airobot,
-  whatsappUI,
-  strokedetection,
-  aquilasvm,
-  robotpaper,
-  ckd,
-  automatedImage,
-  sternblog,
-  sternfellow,
-  youtubeSummarization,
-  rainPrediction,
-  gadgetEase,
-  workoutBuddyImage,
-};
-import automatedImage from "./publications/automated_image.png";
-import youtubeSummarization from "./ragg_utube.webp";
-import rainPrediction from "./rainPrediction.webp";
-import gadgetEase from "./gadgetEase.png";
-import workoutBuddyImage from "./workoutBuddyImage.png";
-import sternblog from "./featured/sternblog.png";
-import sternfellow from "./featured/sternfellow.png";
-
-export {
-  logo,
-  backend,
-  creator,
-  mobile,
-  web,
-  github,
-  figmaIcon,
-  menu,
-  close,
-  css,
-  docker,
-  figma,
-  git,
-  html,
-  javascript,
-  mongodb,
-  nodejs,
-  reactJS,
-  redux,
-  tailwind,
-  typescript,
-  threejs,
-  reactnative,
-  python,
-  nyu,
-  firebeats,
-  comviva,
-  cognizant,
   carrent,
   docconsult,
   airobot,

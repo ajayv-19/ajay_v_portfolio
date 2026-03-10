@@ -35,6 +35,15 @@ import {
   rainPrediction,
   gadgetEase,
   workoutBuddyImage,
+  aws,
+  azure,
+  javaTech,
+  restapi,
+  langchain,
+  lld,
+  campusmeshLogo,
+  amazonLogo,
+  pwcLogo,
 } from "../assets";
 
 import javaCertificateImg from "../Certificates/JavaCertificate.jpeg";
@@ -89,10 +98,12 @@ const services = [
 ];
 
 const technologies = [
-  { name: "HTML 5", icon: html },
-  { name: "CSS 3", icon: css },
+  { name: "Java", icon: javaTech },
+  { name: "Python", icon: python },
   { name: "JavaScript", icon: javascript },
   { name: "TypeScript", icon: typescript },
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
   { name: "React", icon: reactJS },
   { name: "React Native", icon: reactnative },
   { name: "Redux Toolkit", icon: redux },
@@ -100,8 +111,6 @@ const technologies = [
   { name: "Node.js", icon: nodejs },
   { name: "MongoDB", icon: mongodb },
   { name: "REST APIs", icon: restapi },
-  { name: "Java", icon: javaTech },
-  { name: "Python", icon: python },
   { name: "AWS", icon: aws },
   { name: "Azure", icon: azure },
   { name: "LangChain", icon: langchain },
@@ -172,66 +181,7 @@ const experiences = [
       { text: "Employment Verification Letter", url: CERTIFICATES_DRIVE_FOLDER },
     ],
   },
-
-  {
-    title: "Software Engineer",
-    company_name: "Campus Mesh",
-    icon: backend,
-    iconBg: "#E6DEDD",
-    date: "Jan 2025 – Present",
-    points: [
-      "Developed and maintained scalable Node.js microservices powering real-time academic workflows for 10K+ users, including study groups, messaging, notifications, and profile management.",
-      "Built a personalized recommendation engine using collaborative filtering and behavioral analytics, increasing user engagement by 28% and retention by 50%.",
-      "Authored LLM-based retrieval pipelines for CampusIQ (AI Assistant), improving contextual accuracy by 30% through semantic retrieval and structured data indexing.",
-    ],
-  },
-  {
-    title: "Software Development Engineer Intern",
-    company_name: "Amazon",
-    icon: creator,
-    iconBg: "#383E56",
-    date: "May 2025 – Aug 2025",
-    points: [
-      "Architected a secure UI console for Amazon fulfillment center teams to view image/video evidence across FCs; presented the system design for approval and established Role Based Access (4+ roles) using OAuth, Midway SSO, and HELIS.",
-      "Provisioned serverless Infrastructure-as-Code using AWS CDK with API Gateway, Lambda, DynamoDB, S3, and IAM, reducing provisioning time by 70% and enabling multi-stage, multi-region CI/CD deployments.",
-      "Built a React 18 frontend with optimized API integration, advanced filtering, and client-side caching, reducing page load time by 40%.",
-      "Engineered backend services in Java using Coral, Smithy, Dagger, and CBOR serialization; applied low-level design and design patterns, reducing backend execution time by 35% with unit and integration testing using Mockito.",
-    ],
-  },
-  {
-    title: "Software Developer (On-Campus)",
-    company_name: "New York University (Novel AI Technologies, Inc.)",
-    icon: nyu,
-    iconBg: "#E6DEDD",
-    date: "Aug 2024 – Present",
-    points: [
-      "Architected an NSF-funded ($100K) AI-powered health app for iOS and Android, processing real-time wearable data; deployed cloud-hosted AI models for health metrics analysis and food image processing.",
-      "Engineered ETL pipelines transforming NoSQL into PostgreSQL using concurrency control and locking mechanisms; processed 250K+ records and powered AWS QuickSight dashboards for real-time health analytics.",
-      "Developed an insurance analytics platform (React, Node.js, REST APIs); deployed Docker containers on EC2, implemented Stripe billing, RBAC, and row-level security, generating $50K+ revenue.",
-      "Streamlined underwriting via broker portal integrated with insurer platform; implemented document and media processing and WebSocket-based real-time communication; secured 6 insurance clients.",
-    ],
-    links: [
-      { text: "MyBeats Health", url: "https://mybeatshealth.com/home" },
-      { text: "Broker Portal", url: "https://broker.mybeatshealth.com/" },
-    ],
-  },
-  {
-    title: "Senior Software Engineer",
-    company_name: "PricewaterhouseCoopers (PwC)",
-    icon: comviva,
-    iconBg: "#383E56",
-    date: "Aug 2021 – Aug 2024",
-    points: [
-      "Developed a distributed backend on Microsoft Azure for a health platform, integrating with Microsoft CRM and implementing event-driven processing and fault tolerance.",
-      "Led code reviews and mentored engineers on software design principles, reducing production bugs by 25%.",
-      "Deployed an NLP-based OCR neural model on Azure to automate structured data extraction, reducing data processing time by 75%.",
-      "Optimized data ingestion with parallel processing for 100K-row Excel files; reduced execution time from 5 hours to 1 hour.",
-      "Built Power BI dashboards processing large datasets from multiple databases, improving reporting efficiency by 40%.",
-    ],
-    links: [
-      { text: "Employment Verification Letter", url: CERTIFICATES_DRIVE_FOLDER },
-    ],
-  },
+];
 
 const testimonials = [
   {
@@ -316,7 +266,7 @@ const projects = [
       { name: "material-ui", color: "green-text-gradient" },
       { name: "rapid-api", color: "pink-text-gradient" },
     ],
-    image: workoutBuddyImage, 
+    image: workoutBuddyImage,
     source_code_link: "https://github.com/MetunNivin/Workout_buddy",
     isFigma: false,
   },
