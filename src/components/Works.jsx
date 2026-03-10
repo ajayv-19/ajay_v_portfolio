@@ -43,6 +43,7 @@ const ProjectCard = ({
           image={image}
           source_code_link={source_code_link}
           isFigma={isFigma}
+          publication_link={publication_link}
         />
       )}
     </motion.div>
@@ -57,76 +58,91 @@ const ProjectContent = ({
   source_code_link,
   isFigma,
   publication_link,
-}) => (
-  <a href={publication_link || source_code_link} target="_blank" rel="noopener noreferrer">
-  <div className="flex flex-col md:flex-row bg-tertiary p-5 rounded-2xl w-full cursor-pointer md:space-x-5">
-    {/* Image Section */}
-    <div className="relative md:w-[400px] w-full h-[230px] flex-shrink-0">
-      <img
-        src={image}
-        alt="project_image"
-        className="w-full h-full object-cover rounded-2xl"
-      />
-      <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-        {source_code_link && !isFigma && (
-          <a
-            href={source_code_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
-          >
-            <img
-              src={github}
-              alt="GitHub source code"
-              className="w-1/2 h-1/2 object-contain"
-            />
-          </a>
-        )}
-        {isFigma && source_code_link && (
-          <a
-            href={source_code_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
-          >
-            <img
-              src={figmaIcon}
-              alt="Figma link"
-              className="w-1/2 h-1/2 object-contain"
-            />
-          </a>
-        )}
-        {publication_link && !isFigma && !source_code_link && (
-          <a
-            href={publication_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
-          >
-            <span className="text-white text-xs font-bold mr-1">🔗</span>
-          </a>
-        )}
+}) => {
+  const mainLink = publication_link || source_code_link;
+
+  const handleCardClick = () => {
+    if (mainLink) window.open(mainLink, "_blank", "noopener,noreferrer");
+  };
+
+  return (
+    <div
+      role="button"
+      tabIndex={0}
+      onClick={handleCardClick}
+      onKeyDown={(e) => e.key === "Enter" && handleCardClick()}
+      className="flex flex-col md:flex-row bg-tertiary p-5 rounded-2xl w-full cursor-pointer md:space-x-5"
+    >
+      {/* Image Section */}
+      <div className="relative md:w-[400px] w-full h-[230px] flex-shrink-0">
+        <img
+          src={image}
+          alt="project_image"
+          className="w-full h-full object-cover rounded-2xl"
+        />
+        <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          {source_code_link && !isFigma && (
+            <a
+              href={source_code_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
+            >
+              <img
+                src={github}
+                alt="GitHub source code"
+                className="w-1/2 h-1/2 object-contain"
+              />
+            </a>
+          )}
+          {isFigma && source_code_link && (
+            <a
+              href={source_code_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
+            >
+              <img
+                src={figmaIcon}
+                alt="Figma link"
+                className="w-1/2 h-1/2 object-contain"
+              />
+            </a>
+          )}
+          {publication_link && !isFigma && !source_code_link && (
+            <a
+              href={publication_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
+            >
+              <span className="text-white text-xs font-bold mr-1">🔗</span>
+            </a>
+          )}
+        </div>
+      </div>
+
+      {/* Text Content Section */}
+      <div className="flex flex-col">
+        <div className="mt-5">
+          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
+              #{tag.name}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
-
-    {/* Text Content Section */}
-    <div className="flex flex-col">
-      <div className="mt-5">
-        <h3 className="text-white font-bold text-[24px]">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px]">{description}</p>
-      </div>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
-            #{tag.name}
-          </p>
-        ))}
-      </div>
-    </div>
-  </div>
-</a>
-);
+  );
+};
 
 const Works = () => {
   return (
@@ -149,7 +165,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7 block">
+      <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

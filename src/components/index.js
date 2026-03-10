@@ -8,7 +8,7 @@ import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Publications from './Publications';
-import Featured from './Featured';
+import Certificates from './Certificates';
 import StarsCanvasLowIntensity from './StarsCanvasLowIntensity';
 
 export {
@@ -26,5 +26,5 @@ export {
   ComputersCanvas, 
   StarsCanvas,
   StarsCanvasLowIntensity,
-  Featured
+  Certificates
 }

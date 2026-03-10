@@ -29,18 +29,18 @@ import {
   strokedetection,
   aquilasvm,
   robotpaper,
-  springerpaper,
-  hybridintrusion,
   ckd,
-  ecological,
-  neuralnetwork,
-  sternblog,
-  sternfellow,
+  automatedImage,
   youtubeSummarization,
   rainPrediction,
   gadgetEase,
   workoutBuddyImage,
 } from "../assets";
+
+import javaCertificateImg from "../Certificates/JavaCertificate.jpeg";
+import htmlCertImg from "../Certificates/html.jpeg";
+
+const CERTIFICATES_DRIVE_FOLDER = "https://drive.google.com/drive/folders/1-Jvfb8c76gi73qbyc3Fq5TI-T0iq_uL_";
 
 export const navLinks = [
   {
@@ -89,69 +89,90 @@ const services = [
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactJS,
-  },
-  {
-    name: "React Native",
-    icon: reactnative,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "React", icon: reactJS },
+  { name: "React Native", icon: reactnative },
+  { name: "Redux Toolkit", icon: redux },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Node.js", icon: nodejs },
+  { name: "MongoDB", icon: mongodb },
+  { name: "REST APIs", icon: restapi },
+  { name: "Java", icon: javaTech },
+  { name: "Python", icon: python },
+  { name: "AWS", icon: aws },
+  { name: "Azure", icon: azure },
+  { name: "LangChain", icon: langchain },
+  { name: "System Design / LLD", icon: lld },
+  { name: "Three.js", icon: threejs },
+  { name: "Git", icon: git },
+  { name: "Figma", icon: figma },
+  { name: "Docker", icon: docker },
 ];
 
 const experiences = [
+  {
+    title: "Software Engineer",
+    company_name: "Campus Mesh",
+    icon: campusmeshLogo,
+    iconBg: "#E6DEDD",
+    date: "Jan 2025 – Present",
+    points: [
+      "Developed and maintained scalable Node.js microservices powering real-time academic workflows for 10K+ users, including study groups, messaging, notifications, and profile management.",
+      "Built a personalized recommendation engine using collaborative filtering and behavioral analytics, increasing user engagement by 28% and retention by 50%.",
+      "Authored LLM-based retrieval pipelines for CampusIQ (AI Assistant), improving contextual accuracy by 30% through semantic retrieval and structured data indexing.",
+    ],
+  },
+  {
+    title: "Software Development Engineer Intern",
+    company_name: "Amazon",
+    icon: amazonLogo,
+    iconBg: "#383E56",
+    date: "May 2025 – Aug 2025",
+    points: [
+      "Architected a secure UI console for Amazon fulfillment center teams to view image/video evidence across FCs; presented the system design for approval and established Role Based Access (4+ roles) using OAuth, Midway SSO, and HELIS.",
+      "Provisioned serverless Infrastructure-as-Code using AWS CDK with API Gateway, Lambda, DynamoDB, S3, and IAM, reducing provisioning time by 70% and enabling multi-stage, multi-region CI/CD deployments.",
+      "Built a React 18 frontend with optimized API integration, advanced filtering, and client-side caching, reducing page load time by 40%.",
+      "Engineered backend services in Java using Coral, Smithy, Dagger, and CBOR serialization; applied low-level design and design patterns, reducing backend execution time by 35% with unit and integration testing using Mockito.",
+    ],
+  },
+  {
+    title: "Software Developer (On-Campus)",
+    company_name: "New York University (Novel AI Technologies, Inc.)",
+    icon: nyu,
+    iconBg: "#E6DEDD",
+    date: "Aug 2024 – Present",
+    points: [
+      "Architected an NSF-funded ($100K) AI-powered health app for iOS and Android, processing real-time wearable data; deployed cloud-hosted AI models for health metrics analysis and food image processing.",
+      "Engineered ETL pipelines transforming NoSQL into PostgreSQL using concurrency control and locking mechanisms; processed 250K+ records and powered AWS QuickSight dashboards for real-time health analytics.",
+      "Developed an insurance analytics platform (React, Node.js, REST APIs); deployed Docker containers on EC2, implemented Stripe billing, RBAC, and row-level security, generating $50K+ revenue.",
+      "Streamlined underwriting via broker portal integrated with insurer platform; implemented document and media processing and WebSocket-based real-time communication; secured 6 insurance clients.",
+    ],
+    links: [
+      { text: "MyBeats Health", url: "https://mybeatshealth.com/home" },
+      { text: "Broker Portal", url: "https://broker.mybeatshealth.com/" },
+    ],
+  },
+  {
+    title: "Senior Software Engineer",
+    company_name: "PricewaterhouseCoopers (PwC)",
+    icon: pwcLogo,
+    iconBg: "#383E56",
+    date: "Aug 2021 – Aug 2024",
+    points: [
+      "Developed a distributed backend on Microsoft Azure for a health platform, integrating with Microsoft CRM and implementing event-driven processing and fault tolerance.",
+      "Led code reviews and mentored engineers on software design principles, reducing production bugs by 25%.",
+      "Deployed an NLP-based OCR neural model on Azure to automate structured data extraction, reducing data processing time by 75%.",
+      "Optimized data ingestion with parallel processing for 100K-row Excel files; reduced execution time from 5 hours to 1 hour.",
+      "Built Power BI dashboards processing large datasets from multiple databases, improving reporting efficiency by 40%.",
+    ],
+    links: [
+      { text: "Employment Verification Letter", url: CERTIFICATES_DRIVE_FOLDER },
+    ],
+  },
+
   {
     title: "Software Engineer",
     company_name: "Campus Mesh",
@@ -207,8 +228,10 @@ const experiences = [
       "Optimized data ingestion with parallel processing for 100K-row Excel files; reduced execution time from 5 hours to 1 hour.",
       "Built Power BI dashboards processing large datasets from multiple databases, improving reporting efficiency by 40%.",
     ],
+    links: [
+      { text: "Employment Verification Letter", url: CERTIFICATES_DRIVE_FOLDER },
+    ],
   },
-];
 
 const testimonials = [
   {
@@ -377,27 +400,6 @@ export const publications = [
   },
   {
     title:
-      "Lightweight Deep Learning Accelerators for Real-Time Object Detection in Resource-Constrained IoT Devices",
-    journal: "Springer - Accepted",
-    link: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:2e5259b9-680e-4fde-8e51-9a60455540ff",
-    image: springerpaper,
-  },
-  {
-    title:
-      "Enhanced EEG Emotion Recognition through Hybrid STANN-3DCANN Deep Architectures",
-    journal: "IJCRT",
-    link: "https://www.ijcrt.org/papers/IJCRT2401111.pdf",
-    image: neuralnetwork,
-  },
-  {
-    title:
-      "Hybrid Features-Based Intrusion Detection for the Internet of Vehicles using Dynamic Adaptation",
-    journal: "IJRASET",
-    link: "https://www.ijraset.com/best-journal/hybrid-featuresbased-intrusion-detection-for-the-internet-of-vehicles-using-dynamic-adaptation",
-    image: hybridintrusion,
-  },
-  {
-    title:
       "Predictive Analysis in Nephrology: Evaluating Machine Learning Models for Chronic Kidney Disease Prediction",
     journal: "IJRASET",
     link: "https://www.ijraset.com/best-journal/predictive-analysis-in-nephrology-evaluating-machine-learning-models-for-chronic-kidney-disease-prediction",
@@ -405,32 +407,28 @@ export const publications = [
   },
   {
     title:
-      "Advances in Ecological Surveillance: Real-Time Wildlife Detection using MobileNet-SSD V2 CNN",
-    journal: "IJRASET",
-    link: "https://www.ijraset.com/best-journal/advances-in-ecological-surveillance-realtime-wildlife-detection-using-mobilenetssd-v2-convolutional-neural-network",
-    image: ecological,
+      "Automated Image Labelling Using Active Learning and Transfer Learning Techniques",
+    journal: "IJARESM",
+    link: "https://www.ijaresm.com/uploaded_files/document_file/Madhuvanthi_S,,,ZB0d.pdf",
+    image: automatedImage,
   },
 ];
 
-export const featured = [
-  {
-    title: "Stern Venture Fellows Blog",
-    image: sternblog,
-    links: [
-      {
-        url: "https://nyusternberkleycenter.com/2024/07/summer-coming-to-a-close-with-metun-nivin-of-firebeats/",
-      },
-    ],
-  },
-  {
-    title: "Metun Nivin on FireBeats",
-    image: sternfellow,
-    links: [
-      {
-        url: "https://www.sternventurefellows.com/2024-fellows",
-      },
-    ],
-  },
+export const certificates = [
+  { title: "Microsoft Certified: Power Platform Solution Architect Expert", link: "https://drive.google.com/file/d/1FCrObY9o2Jr3vfk_EttcIbOYrUey55NU/view" },
+  { title: "NPTEL: Programming, Data Structures and Algorithms Using Python", link: "https://drive.google.com/file/d/1RDLhYHN73sEGvajt0HxQuAKzSLmdNvRz/view" },
+  { title: "Microsoft Certified: Power BI Data Analyst Associate", link: "https://drive.google.com/file/d/1XaffZ7Grnmp8K8dwTcZymsE-HYHMuM-U/view" },
+  { title: "Microsoft Certified: Power Platform Fundamentals", link: "https://drive.google.com/file/d/1KR3ILpVIuB3NUpBDDixH9wTAKu5UsEY8/view" },
+  { title: "Microsoft Certified: Power Platform Developer Associate", link: "https://drive.google.com/file/d/1m-RZVaeo78cn2RUUctiKuqbV9F7i1tTx/view" },
+  { title: "Microsoft Certified: Power Platform Functional Consultant Associate", link: "https://drive.google.com/file/d/1nNRarW7QlEJgNBbQjqYEz7OfOFcFA_Yd/view" },
+  { title: "Microsoft Certified: Power Platform App Maker Associate", link: "https://drive.google.com/file/d/1FlUU1gGf94irKs8xxLvxwIt3Z4VWfjCx/view" },
+  { title: "Stanford Online / Coursera: Machine Learning", link: "https://drive.google.com/file/d/1At3BLkqJ9vuhPPUCcrNAw9yNH5li7XdQ/view" },
+  { title: "LetsUpgrade: Certification Program in Javascript Essentials", link: "https://drive.google.com/file/d/1ZEf4a5cYJzMgmWc4L_V3-q7FDKoRimqm/view" },
+  { title: "NPTEL: Programming in Java", link: "https://drive.google.com/file/d/13Md8DvOfFVlsNgUzlB2U4A-y-eVglcbM/view", image: javaCertificateImg },
+  { title: "Microsoft Certified: Azure Data Scientist Associate", link: "https://drive.google.com/file/d/1IDtiC9HSlFDAWIEs3UvDjSLfHvI_8iSu/view" },
+  { title: "Microsoft Certified: Azure Data Fundamentals", link: "https://drive.google.com/file/d/1VBJjfRMsIm8BckoUtLUV7ZbY88Jju2qT/view" },
+  { title: "AWS Certified Cloud Practitioner", link: "https://drive.google.com/file/d/1a3exoiS79RS3q8vSJHT-PpkczSPg54EZ/view" },
+  { title: "HTML Fundamentals (SoloLearn)", link: CERTIFICATES_DRIVE_FOLDER, image: htmlCertImg },
 ];
 
 export default projects;

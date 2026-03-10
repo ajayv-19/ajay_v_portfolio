@@ -5,18 +5,20 @@ import { styles } from "../styles";
 import { technologies } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-
 const TechCard = ({ index, name, icon }) => (
   <Tilt className="max-w-[120px] w-full">
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.1, 0.5)} 
-      className="w-full green-pink-gradient p-[1px] rounded-full shadow-lg"
+      variants={fadeIn("right", "spring", index * 0.1, 0.5)}
+      className="flex flex-col items-center gap-2 group"
     >
-      <div
-        className="bg-tertiary rounded-full w-28 h-28 flex justify-center items-center shadow-md p-4 transition-transform transform hover:scale-105"
-      >
-        <img src={icon} alt={name} className="w-16 h-16 object-contain" />
+      <div className="w-full green-pink-gradient p-[1px] rounded-full shadow-lg">
+        <div className="bg-tertiary rounded-full w-28 h-28 flex justify-center items-center shadow-md p-4 transition-transform transform group-hover:scale-105">
+          <img src={icon} alt={name} className="w-16 h-16 object-contain" />
+        </div>
       </div>
+      <p className="text-secondary text-sm text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        {name}
+      </p>
     </motion.div>
   </Tilt>
 );

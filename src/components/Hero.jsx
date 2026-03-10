@@ -3,7 +3,12 @@ import React, { useEffect, useState, useRef } from "react";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import StarsCanvasLowIntensity from "./StarsCanvasLowIntensity";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaResearchgate,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const Counter = ({ from, to, duration = 2 }) => {
   const [count, setCount] = useState(from);
@@ -65,7 +70,7 @@ const Hero = () => {
 
   return (
     <section className={`relative w-full h-screen mx-auto`}>
-      <StarsCanvasLowIntensity/>
+      <StarsCanvasLowIntensity />
       <div
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
@@ -99,6 +104,14 @@ const Hero = () => {
               <FaGithub size={30} />
             </a>
             <a
+              href="https://www.researchgate.net/profile/Ajay-Venkatesh-3/research"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full text-white hover:text-purple-500 transition-all duration-300 flex items-center justify-center shadow-lg"
+            >
+              <FaResearchgate size={30} />
+            </a>
+            <a
               href="mailto:av3855@nyu.edu"
               className="w-12 h-12 rounded-full text-white hover:text-purple-500 transition-all duration-300 flex items-center justify-center shadow-lg"
             >
@@ -111,7 +124,7 @@ const Hero = () => {
               {/* Years of Experience Counter */}
               <motion.div className="text-center text-white font-bold text-xl md:text-3xl flex flex-col items-center">
                 <p className="flex items-center text-white text-2xl md:text-4xl font-extrabold">
-                  <Counter from={0} to={3} duration={2} />
+                  <Counter from={0} to={5} duration={2} />
                 </p>
                 <p className="text-gray-400 text-xs md:text-base">
                   Years of Experience
@@ -121,17 +134,17 @@ const Hero = () => {
               {/* Grant Counter */}
               <motion.div className="text-center text-white font-bold text-xl md:text-3xl flex flex-col items-center">
                 <p className="flex items-center text-white text-2xl md:text-4xl font-extrabold">
-                  $ <Counter from={0} to={24000} duration={2} />
+                  $ <Counter from={0} to={30000} duration={2} />
                 </p>
                 <p className="text-gray-400 text-xs md:text-base">
-                    Total Scholarships Secured 
+                  Total Scholarships Secured
                 </p>
               </motion.div>
 
               {/* Research Paper Counter */}
               <motion.div className="text-center text-white font-bold text-xl md:text-3xl flex flex-col items-center">
                 <p className="flex items-center text-white text-2xl md:text-4xl font-extrabold">
-                  <Counter from={0} to={8} duration={2} />
+                  <Counter from={0} to={5} duration={2} />
                 </p>
                 <p className="text-gray-400 text-xs md:text-base">
                   Research Papers Published
