@@ -17,6 +17,72 @@ const getDriveThumbnailUrl = (link) => {
     : null;
 };
 
+// Certificate-style placeholder image (SVG) so every card shows an image preview
+const CertificatePlaceholder = () => (
+  <svg
+    className="w-full h-full object-cover"
+    viewBox="0 0 400 240"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect width="400" height="240" fill="#f8f6f3" />
+    <rect
+      x="24"
+      y="20"
+      width="352"
+      height="200"
+      rx="4"
+      fill="#fff"
+      stroke="#e5e0d8"
+      strokeWidth="1.5"
+    />
+    <circle
+      cx="200"
+      cy="88"
+      r="28"
+      fill="#915EFF"
+      fillOpacity="0.12"
+      stroke="#915EFF"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M192 88l6 6 12-12"
+      stroke="#915EFF"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+    <rect
+      x="80"
+      y="132"
+      width="240"
+      height="8"
+      rx="2"
+      fill="#e5e0d8"
+      fillOpacity="0.8"
+    />
+    <rect
+      x="80"
+      y="148"
+      width="180"
+      height="6"
+      rx="2"
+      fill="#e5e0d8"
+      fillOpacity="0.5"
+    />
+    <rect
+      x="80"
+      y="162"
+      width="200"
+      height="6"
+      rx="2"
+      fill="#e5e0d8"
+      fillOpacity="0.5"
+    />
+  </svg>
+);
+
 const CertificateCard = ({ index, title, link, image }) => {
   const isLargeScreen = useMediaQuery("(min-width: 1024px)");
 
@@ -37,13 +103,14 @@ const CardContent = ({ title, link, image }) => {
   const driveThumbnail = getDriveThumbnailUrl(link);
   const [imgError, setImgError] = useState(false);
   // Prefer your own image, then Drive thumbnail, then placeholder
-  const previewSrc = image || (driveThumbnail && !imgError ? driveThumbnail : null);
+  const previewSrc =
+    image || (driveThumbnail && !imgError ? driveThumbnail : null);
 
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
       <div className="bg-tertiary rounded-2xl sm:w-[360px] w-full flex flex-col h-[450px] cursor-pointer overflow-hidden shadow-card">
         {/* White document-style preview area (rounded top only, like publication cards) */}
-        <div className="relative w-full h-[240px] bg-white rounded-t-2xl overflow-hidden">
+        <div className="relative w-full h-[240px] bg-white rounded-t-2xl overflow-hidden flex flex-col">
           {previewSrc ? (
             <img
               src={previewSrc}
@@ -52,10 +119,7 @@ const CardContent = ({ title, link, image }) => {
               onError={() => setImgError(true)}
             />
           ) : (
-            <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gray-50">
-              <FaFileAlt className="text-[#915EFF]/40" size={64} />
-              <span className="text-gray-400 text-sm font-medium">Certificate</span>
-            </div>
+            <CertificatePlaceholder />
           )}
           {/* Dark circular link icon, top-right */}
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
@@ -71,7 +135,7 @@ const CardContent = ({ title, link, image }) => {
             {title}
           </h3>
           <p className="mt-2 text-secondary text-[16px] text-center">
-            View certificate
+            View certificates
           </p>
         </div>
       </div>

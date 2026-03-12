@@ -7,6 +7,11 @@ const SectionWrapper = (Component, idName) =>
   function HOC() {
     const isLargeScreen = useMediaQuery("(min-width: 1024px)");
 
+    if (!Component || (typeof Component !== "function" && typeof Component !== "object")) {
+      console.error("SectionWrapper: invalid or undefined Component for id", idName, Component);
+      return null;
+    }
+
     return (
       <motion.section
         {...(isLargeScreen

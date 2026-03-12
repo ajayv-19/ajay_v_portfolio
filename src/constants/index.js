@@ -21,7 +21,6 @@ import {
   firebeats,
   comviva,
   cognizant,
-  carrent,
   airobot,
   docconsult,
   threejs,
@@ -44,10 +43,19 @@ import {
   campusmeshLogo,
   amazonLogo,
   pwcLogo,
+  certAws,
+  certPython,
+  certMachineLearning,
+  certAzureFundamentals,
+  certPowerBI,
+  certAzureDataScientist,
+  certPL400,
+  certSolutionArchitect,
+  certJava,
+  expenseTracker,
+  cancerProject,
+  flightProject,
 } from "../assets";
-
-import javaCertificateImg from "../Certificates/JavaCertificate.jpeg";
-import htmlCertImg from "../Certificates/html.jpeg";
 
 const CERTIFICATES_DRIVE_FOLDER = "https://drive.google.com/drive/folders/1-Jvfb8c76gi73qbyc3Fq5TI-T0iq_uL_";
 
@@ -71,6 +79,10 @@ export const navLinks = [
   {
     id: "publications",
     title: "Publications",
+  },
+  {
+    id: "certificates",
+    title: "Certificates",
   },
   {
     id: "contact",
@@ -212,62 +224,45 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Gadget Ease",
+    name: "Advanced Expense Tracker (Java)",
     description:
-      "Gadget Ease is a cutting-edge ecommerce platform tailored for mobile phone enthusiasts, offering a seamless purchasing experience with customizable options.",
+      "Desktop expense tracker built with Java and JavaFX. Log and organize daily expenses, manage shared/group spending, and split costs cleanly between people, all with clear visual summaries powered by JFreeChart. Clean client–server separation and a modern UI for actionable insights into day-to-day spending.",
     tags: [
-      { name: "mvc-architecture", color: "blue-text-gradient" },
-      { name: "express.js", color: "green-text-gradient" },
-      { name: "node.js", color: "pink-text-gradient" },
-      { name: "mongodb", color: "orange-text-gradient" },
-      { name: "socket.io", color: "blue-text-gradient" },
-      { name: "twilio-api", color: "green-text-gradient" },
-      { name: "paypal-integration", color: "pink-text-gradient" },
+      { name: "java", color: "blue-text-gradient" },
+      { name: "javafx", color: "green-text-gradient" },
+      { name: "sqlite", color: "pink-text-gradient" },
+      { name: "jfreechart", color: "orange-text-gradient" },
     ],
-    image: gadgetEase,
-    source_code_link: "https://github.com/MetunNivin/Gadgets_Ease-ecom",
+    image: expenseTracker,
+    source_code_link: "https://github.com/ajayv-19/advavanced_expense_tracker_java",
     isFigma: false,
   },
   {
-    name: "Rain in Australia - Next-Day Prediction Model",
+    name: "ALIVE: Cancer Prevention Training",
     description:
-      "Developed a machine learning model to predict next-day rainfall in Australia using PySpark, Apache Spark MLlib, and XGBoost. Processed 10+ years of meteorological data (~10M records), applying feature engineering on key weather attributes like temperature, humidity, and wind speed. Optimized performance with hyperparameter tuning and MLflow for tracking, enhancing accuracy and efficiency.",
+      "Web-based training app for firefighter cancer awareness, combining interactive digital resources, quizzes, and multimedia scenarios to teach how to recognize and reduce occupational cancer risks.",
+    tags: [
+      { name: "html5", color: "blue-text-gradient" },
+      { name: "css3", color: "green-text-gradient" },
+      { name: "javascript", color: "pink-text-gradient" },
+      { name: "php", color: "orange-text-gradient" },
+    ],
+    image: cancerProject,
+    source_code_link: "https://github.com/ajayv-19/alive-cancer",
+    isFigma: false,
+  },
+  {
+    name: "Flight Delay Prediction (Big Data)",
+    description:
+      "Big data pipeline to predict US flight delays using 2024 BTS data. Uses Hadoop HDFS for distributed storage, PySpark and Spark SQL for cleaning and feature engineering, and MLlib models to classify delay severity with rich visualizations in Seaborn, Matplotlib, and Plotly.",
     tags: [
       { name: "pyspark", color: "blue-text-gradient" },
-      { name: "xgboost", color: "green-text-gradient" },
-      { name: "big-data", color: "pink-text-gradient" },
-      { name: "mlflow", color: "orange-text-gradient" },
+      { name: "hadoop", color: "green-text-gradient" },
+      { name: "spark-sql", color: "pink-text-gradient" },
+      { name: "mllib", color: "orange-text-gradient" },
     ],
-    image: rainPrediction,
-    source_code_link: "https://github.com/MetunNivin/Weather_Prediction",
-    isFigma: false,
-  },
-  {
-    name: "Retrieval-Augmented LLM Summarization & Transcription Engine for YouTube",
-    description:
-      "Developed an advanced AI-powered transcription and summarization engine for YouTube videos using Llama 2, Whisper ASR, and Haystack. Optimized inference pipelines to enhance performance and reduce GPU dependency.",
-    tags: [
-      { name: "llama2", color: "blue-text-gradient" },
-      { name: "haystack", color: "green-text-gradient" },
-      { name: "whisper-asr", color: "pink-text-gradient" },
-      { name: "fastapi", color: "orange-text-gradient" },
-    ],
-    image: youtubeSummarization,
-    source_code_link:
-      "https://github.com/MetunNivin/Retrieval-Augmented-LLM-Summarization-Transcription-Engine-for-YouTube",
-    isFigma: false,
-  },
-  {
-    name: "Workout Buddy",
-    description:
-      "Workout Buddy is a fitness platform designed to help users discover exercises for every body part. Built using React and Rapid API, it offers a user-friendly interface to explore, filter, and sort exercises based on body parts, equipment, and difficulty levels.",
-    tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "material-ui", color: "green-text-gradient" },
-      { name: "rapid-api", color: "pink-text-gradient" },
-    ],
-    image: workoutBuddyImage,
-    source_code_link: "https://github.com/MetunNivin/Workout_buddy",
+    image: flightProject,
+    source_code_link: "https://github.com/ajayvenkatesh19/flight-delay-2024",
     isFigma: false,
   },
   {
@@ -280,35 +275,7 @@ const projects = [
       { name: "google-cloud-vision", color: "pink-text-gradient" },
     ],
     image: docconsult,
-    source_code_link: "https://github.com/MetunNivin/MediConsult",
-    isFigma: false,
-  },
-  {
-    name: "MediBot: AI-Driven Medication Delivery Bot",
-    description:
-      "Secured funding from KSCST, ranking among the top 130 national projects. Developed an AI-powered medical robot with a dual-algorithm framework for accurate patient face recognition and advanced navigation. Achieved 95% navigation accuracy, 98% medicine dispensing accuracy, and zero safety incidents in real-world trials.",
-    tags: [
-      { name: "robotics", color: "blue-text-gradient" },
-      { name: "deep-learning", color: "green-text-gradient" },
-      { name: "computer-vision", color: "pink-text-gradient" },
-    ],
-    image: airobot,
-    publication_link: "https://ieeexplore.ieee.org/document/10592899",
-    // source_code_link: "https://github.com/MetunNivin",
-    isFigma: false,
-  },
-  {
-    name: "Smart IoT Object Detection Accelerator",
-    description:
-      "Designed a cross-deep learning model integrating CNNs and the MKM algorithm to optimize energy-efficient cluster formation in MEC. Achieved 98.7 fps real-time object detection on ZC702 with an 11.25x reduction in energy consumption. Implemented a high-performance data architecture using InfluxDB for efficient IoT data processing in constrained environments.",
-    tags: [
-      { name: "iot", color: "blue-text-gradient" },
-      { name: "cnn", color: "green-text-gradient" },
-      { name: "edge-computing", color: "pink-text-gradient" },
-    ],
-    image: carrent,
-    publication_link: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:2e5259b9-680e-4fde-8e51-9a60455540ff",
-    // source_code_link: "https://github.com/MetunNivin",
+    source_code_link: "https://github.com/ajayv-19/doctor_management/tree/main",
     isFigma: false,
   },
   {
@@ -365,20 +332,15 @@ export const publications = [
 ];
 
 export const certificates = [
-  { title: "Microsoft Certified: Power Platform Solution Architect Expert", link: "https://drive.google.com/file/d/1FCrObY9o2Jr3vfk_EttcIbOYrUey55NU/view" },
-  { title: "NPTEL: Programming, Data Structures and Algorithms Using Python", link: "https://drive.google.com/file/d/1RDLhYHN73sEGvajt0HxQuAKzSLmdNvRz/view" },
-  { title: "Microsoft Certified: Power BI Data Analyst Associate", link: "https://drive.google.com/file/d/1XaffZ7Grnmp8K8dwTcZymsE-HYHMuM-U/view" },
-  { title: "Microsoft Certified: Power Platform Fundamentals", link: "https://drive.google.com/file/d/1KR3ILpVIuB3NUpBDDixH9wTAKu5UsEY8/view" },
-  { title: "Microsoft Certified: Power Platform Developer Associate", link: "https://drive.google.com/file/d/1m-RZVaeo78cn2RUUctiKuqbV9F7i1tTx/view" },
-  { title: "Microsoft Certified: Power Platform Functional Consultant Associate", link: "https://drive.google.com/file/d/1nNRarW7QlEJgNBbQjqYEz7OfOFcFA_Yd/view" },
-  { title: "Microsoft Certified: Power Platform App Maker Associate", link: "https://drive.google.com/file/d/1FlUU1gGf94irKs8xxLvxwIt3Z4VWfjCx/view" },
-  { title: "Stanford Online / Coursera: Machine Learning", link: "https://drive.google.com/file/d/1At3BLkqJ9vuhPPUCcrNAw9yNH5li7XdQ/view" },
-  { title: "LetsUpgrade: Certification Program in Javascript Essentials", link: "https://drive.google.com/file/d/1ZEf4a5cYJzMgmWc4L_V3-q7FDKoRimqm/view" },
-  { title: "NPTEL: Programming in Java", link: "https://drive.google.com/file/d/13Md8DvOfFVlsNgUzlB2U4A-y-eVglcbM/view", image: javaCertificateImg },
-  { title: "Microsoft Certified: Azure Data Scientist Associate", link: "https://drive.google.com/file/d/1IDtiC9HSlFDAWIEs3UvDjSLfHvI_8iSu/view" },
-  { title: "Microsoft Certified: Azure Data Fundamentals", link: "https://drive.google.com/file/d/1VBJjfRMsIm8BckoUtLUV7ZbY88Jju2qT/view" },
-  { title: "AWS Certified Cloud Practitioner", link: "https://drive.google.com/file/d/1a3exoiS79RS3q8vSJHT-PpkczSPg54EZ/view" },
-  { title: "HTML Fundamentals (SoloLearn)", link: CERTIFICATES_DRIVE_FOLDER, image: htmlCertImg },
+  { title: "AWS Certified Cloud Practitioner", link: "https://drive.google.com/file/d/1a3exoiS79RS3q8vSJHT-PpkczSPg54EZ/view", image: certAws },
+  { title: "Microsoft Certified: Azure Data Scientist Associate", link: "https://drive.google.com/file/d/1IDtiC9HSlFDAWIEs3UvDjSLfHvI_8iSu/view", image: certAzureDataScientist },
+  { title: "Microsoft Certified: Azure Data Fundamentals", link: "https://drive.google.com/file/d/1VBJjfRMsIm8BckoUtLUV7ZbY88Jju2qT/view", image: certAzureFundamentals },
+  { title: "NPTEL (IIT): Programming in Java", link: "https://drive.google.com/file/d/13Md8DvOfFVlsNgUzlB2U4A-y-eVglcbM/view", image: certJava },
+  { title: "NPTEL (IIT): Programming, Data Structures and Algorithms Using Python", link: "https://drive.google.com/file/d/1RDLhYHN73sEGvajt0HxQuAKzSLmdNvRz/view", image: certPython },
+  { title: "Stanford Online / Coursera: Machine Learning", link: "https://drive.google.com/file/d/1At3BLkqJ9vuhPPUCcrNAw9yNH5li7XdQ/view", image: certMachineLearning },
+  { title: "Microsoft Certified: Power Platform Solution Architect Expert", link: "https://drive.google.com/file/d/1FCrObY9o2Jr3vfk_EttcIbOYrUey55NU/view", image: certSolutionArchitect },
+  { title: "Microsoft Certified: Power BI Data Analyst Associate", link: "https://drive.google.com/file/d/1XaffZ7Grnmp8K8dwTcZymsE-HYHMuM-U/view", image: certPowerBI },
+  { title: "Microsoft Certified: Power Platform Developer Associate", link: "https://drive.google.com/file/d/1m-RZVaeo78cn2RUUctiKuqbV9F7i1tTx/view", image: certPL400 },
 ];
 
 export default projects;

@@ -157,11 +157,12 @@ const Hero = () => {
 
       <div className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-full flex justify-center">
         {/* <ComputersCanvas /> */}
-        {/* For Small Screens: Show Download CV Button */}
-        <div className="lg:hidden flex justify-center w-full">
+        {/* Download CV - opens resume on Google Drive */}
+        <div className="flex justify-center w-full">
           <a
-            // href="https://drive.google.com/uc?export=download&id=1Pz8bhJnv-ntclRj-oGa4ACohg55h985x"
-            download
+            href="https://drive.google.com/uc?export=download&id=1crEMAgABOxGEwBty07XfpVkZyuFGhILN"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-purple-600 hover:bg-purple-700 hover:scale-110 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 text-md"
           >
             Download CV

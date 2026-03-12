@@ -5,7 +5,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-import profile from "../assets/profilepic.jpg";
+import profile from "../assets/profilepic.jpeg";
 import useMediaQuery from "../utils/useMediaQuery";
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -73,10 +73,9 @@ const About = () => {
             <p>
               I’m also deep in AI and ML—building agents and intelligent
               systems. I’m pursuing my Master’s in Computer Engineering at NYU
-              (GPA 3.9) with a focus on machine learning, deep learning, and
-              big data, and I’ve published in IEEE on deep learning for
-              healthcare. If that mix sounds like your kind of build—let’s
-              connect.
+              (GPA 3.9) with a focus on machine learning, deep learning, and big
+              data, and I’ve published in IEEE on deep learning for healthcare.
+              If that mix sounds like your kind of build—let’s connect.
             </p>
           </div>
 

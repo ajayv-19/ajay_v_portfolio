@@ -38,12 +38,24 @@ import campusmeshLogo from "./company/campusmesh.svg";
 import amazonLogo from "./company/amazon.png";
 import pwcLogo from "./company/pwc.png";
 
-import carrent from "./carrent.png";
+import expenseTracker from "./expensetracker.png";
 import docconsult from "./docconsult.png";
 import whatsappUI from "./whatsappUI.png";
 import airobot from "./airobot.png";
 
+import certAws from "./certificatepics/AWS Certified Cloud Practitioner certificate.png";
+import certPython from "./certificatepics/Pythoncertificate.png";
+import certMachineLearning from "./certificatepics/Machine Learning.png";
+import certAzureFundamentals from "./certificatepics/Azuredatafunda.png";
+import certPowerBI from "./certificatepics/PowerBI.png";
+import certAzureDataScientist from "./certificatepics/Azuredatascienist.png";
+import certPL400 from "./certificatepics/PL400.png";
+import certSolutionArchitect from "./certificatepics/Solutionarchitect..png";
+import certJava from "./certificatepics/JavaCertificate.png";
+
 import strokedetection from "./publications/strokedetection.png";
+import cancerProject from "./cancerproject.png";
+import flightProject from "./flight.jpeg";
 import aquilasvm from "./publications/aquilasvm.png";
 import robotpaper from "./publications/robotpaper.png";
 import ckd from "./publications/ckd.png";
@@ -93,7 +105,7 @@ export {
   campusmeshLogo,
   amazonLogo,
   pwcLogo,
-  carrent,
+  expenseTracker,
   docconsult,
   airobot,
   whatsappUI,
@@ -102,10 +114,21 @@ export {
   robotpaper,
   ckd,
   automatedImage,
+  cancerProject,
+  flightProject,
   sternblog,
   sternfellow,
   youtubeSummarization,
   rainPrediction,
   gadgetEase,
   workoutBuddyImage,
+  certAws,
+  certPython,
+  certMachineLearning,
+  certAzureFundamentals,
+  certPowerBI,
+  certAzureDataScientist,
+  certPL400,
+  certSolutionArchitect,
+  certJava,
 };

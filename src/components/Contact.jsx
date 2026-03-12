@@ -42,21 +42,35 @@ const Contact = () => {
 
     setLoading(true);
 
+    console.log("EmailJS env values:", {
+      serviceId: import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      templateId: import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      publicKey: import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+    });
+
+    console.log("EmailJS payload:", {
+      from_name: form.name,
+      from_email: form.email,
+      to_email: "av3855@nyu.edu",
+      message: form.message,
+    });
+
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Metun",
+          to_name: "Ajay",
           from_email: form.email,
-          to_email: "metunnivin@gmail.com",
+          to_email: "av3855@nyu.edu",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
-        () => {
+        (result) => {
+          console.log("EmailJS success:", result);
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
 
@@ -67,9 +81,8 @@ const Contact = () => {
           });
         },
         (error) => {
+          console.error("EmailJS error:", error);
           setLoading(false);
-          console.error(error);
-
           alert("Ahh, something went wrong. Please try again.");
         }
       );
